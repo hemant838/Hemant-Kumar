@@ -128,8 +128,8 @@ export default function AboutSection() {
             {/* Stats */}
             <div className="mt-12 grid grid-cols-3 gap-4">
               {[
-                { label: "Projects", value: "10+" },
-                { label: "Experience", value: "2+ Years" },
+                { label: "Projects", value: "5+" },
+                { label: "Experience", value: "1 Year" },
                 { label: "Technologies", value: "15+" },
               ].map((stat, index) => (
                 <motion.div

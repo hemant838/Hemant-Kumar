@@ -9,6 +9,13 @@ export default function HeroSection() {
   const nameRef = useRef<HTMLHeadingElement>(null)
   const taglineRef = useRef<HTMLParagraphElement>(null)
 
+  const handleScrollToSection = (sectionId: string) => {
+    const section = document.getElementById(sectionId)
+    if (section) {
+      section.scrollIntoView({ behavior: 'smooth' })
+    }
+  }
+
   useEffect(() => {
     // Register GSAP plugin on client side only
     gsap.registerPlugin(TextPlugin)
@@ -117,6 +124,7 @@ export default function HeroSection() {
             className="px-8 py-3 bg-gradient-to-r from-purple-500 to-blue-500 rounded-full text-white font-semibold interactive"
             whileHover={{ scale: 1.05, boxShadow: "0 0 30px rgba(147, 51, 234, 0.5)" }}
             whileTap={{ scale: 0.95 }}
+            onClick={() => handleScrollToSection('projects')}
           >
             View My Work
           </motion.button>
@@ -124,6 +132,7 @@ export default function HeroSection() {
             className="px-8 py-3 border border-white/30 rounded-full text-white font-semibold backdrop-blur-sm interactive"
             whileHover={{ scale: 1.05, backgroundColor: "rgba(255, 255, 255, 0.1)" }}
             whileTap={{ scale: 0.95 }}
+            onClick={() => handleScrollToSection('contact')}
           >
             Get In Touch
           </motion.button>

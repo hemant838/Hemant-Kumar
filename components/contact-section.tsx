@@ -80,7 +80,7 @@ export default function ContactSection() {
   ]
 
   return (
-    <section className="fade-in-section py-20 px-4 relative">
+    <section id="contact" className="fade-in-section py-20 px-4 relative">
       <div className="max-w-6xl mx-auto">
         <motion.h2
           initial={{ opacity: 0, y: 50 }}

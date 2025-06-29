@@ -13,9 +13,6 @@ import ResumeSection from "@/components/resume-section"
 import AnimatedCursor from "@/components/animated-cursor"
 import SmoothScrollProvider from "@/components/smooth-scroll-provider"
 
-if (typeof window !== "undefined") {
-  gsap.registerPlugin(ScrollTrigger)
-}
 
 export default function Portfolio() {
   const containerRef = useRef<HTMLDivElement>(null)
@@ -25,6 +22,9 @@ export default function Portfolio() {
   const textY = useTransform(scrollYProgress, [0, 1], ["0%", "200%"])
 
   useEffect(() => {
+    // Register GSAP plugin on client side only
+    gsap.registerPlugin(ScrollTrigger)
+    
     // GSAP ScrollTrigger animations
     const ctx = gsap.context(() => {
       // Parallax background elements
@@ -82,12 +82,12 @@ export default function Portfolio() {
               key={i}
               className="absolute w-1 h-1 bg-white/30 rounded-full"
               initial={{
-                x: Math.random() * window.innerWidth,
-                y: Math.random() * window.innerHeight,
+                x: `${Math.random() * 100}vw`,
+                y: `${Math.random() * 100}vh`,
               }}
               animate={{
-                x: Math.random() * window.innerWidth,
-                y: Math.random() * window.innerHeight,
+                x: `${Math.random() * 100}vw`,
+                y: `${Math.random() * 100}vh`,
               }}
               transition={{
                 duration: Math.random() * 20 + 10,

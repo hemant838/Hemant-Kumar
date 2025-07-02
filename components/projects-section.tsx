@@ -19,8 +19,7 @@ export default function ProjectsSection() {
         "Profile management for both user types",
         "Streamlined recruitment process",
       ],
-      github: "#",
-      live: "#",
+      github: "https://github.com/hemant838/jobcloud.git",
       color: "from-blue-500 to-purple-500",
     },
     {
@@ -34,8 +33,7 @@ export default function ProjectsSection() {
         "Quick access to stored credentials",
         "Responsive design with modern UI",
       ],
-      github: "#",
-      live: "#",
+      github: "https://github.com/hemant838/passKey.git",
       color: "from-green-500 to-teal-500",
     },
     {
@@ -127,14 +125,6 @@ export default function ProjectsSection() {
                     >
                       <Github size={16} />
                     </motion.a>
-                    <motion.a
-                      href={project.live}
-                      className="p-2 rounded-full bg-white/10 text-white hover:bg-white/20 transition-colors"
-                      whileHover={{ scale: 1.1 }}
-                      whileTap={{ scale: 0.9 }}
-                    >
-                      <ExternalLink size={16} />
-                    </motion.a>
                   </div>
                 </div>
 
@@ -191,14 +181,7 @@ export default function ProjectsSection() {
                           <Github size={20} />
                           <span>View Code</span>
                         </motion.a>
-                        <motion.a
-                          href={project.live}
-                          className="flex items-center space-x-2 px-6 py-3 bg-gradient-to-r from-purple-500 to-blue-500 rounded-full text-white"
-                          whileHover={{ scale: 1.05 }}
-                        >
-                          <ExternalLink size={20} />
-                          <span>Live Demo</span>
-                        </motion.a>
+                        
                       </div>
                     </>
                   )

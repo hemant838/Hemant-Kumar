@@ -67,14 +67,14 @@ export default function ContactSection() {
       icon: Github,
       label: "GitHub",
       value: "GitHub Profile",
-      href: "#",
+      href: "https://github.com/hemant838",
       color: "text-gray-400",
     },
     {
       icon: Linkedin,
       label: "LinkedIn",
       value: "LinkedIn Profile",
-      href: "#",
+      href: "https://www.linkedin.com/in/hemant-kumar-0632822aa",
       color: "text-blue-500",
     },
   ]

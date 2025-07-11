@@ -82,7 +82,7 @@ export default function ProjectsSection() {
         "Responsive UI with global search and localization support"
       ],
       github: "https://github.com/hemant838/price-comparison-tool",
-      liveUrl: "https://price-comparison-demo.vercel.app", // Add your live URL here
+      liveUrl: "https://price-comparison-tool-lilac.vercel.app/", // Add your live URL here
       color: "from-yellow-500 to-red-500"
     },
     {

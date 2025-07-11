@@ -37,37 +37,89 @@ export default function ProjectsSection() {
       color: "from-green-500 to-teal-500",
     },
     {
-  id: 3,
-  title: "Resume Expert",
-  description: "AI-powered resume builder that generates optimized and personalized resumes based on user input and job descriptions.",
-  tech: ["React", "Node.js", "Docker", "PostgreSQL"],
+      id: 3,
+      title: "Resume Expert",
+      description: "AI-powered resume builder that generates optimized and personalized resumes based on user input and job descriptions.",
+      tech: ["React", "Node.js", "Docker", "PostgreSQL"],
+      features: [
+        "AI-generated resume suggestions",
+        "Multi-tenant architecture for scalable user management",
+        "Role-based access control for admins and users",
+        "Smart formatting and keyword optimization for ATS compliance",
+        "Real-time preview and PDF export",
+        "Increased user engagement with dynamic recommendations",
+      ],
+      github: "https://github.com/hemant838/resumeXpert.git",
+      color: "from-orange-500 to-red-500",
+    },
+    {
+      id: 4,
+      title: "Form Scratch",
+      description: "AI-powered form builder that generates smart, dynamic forms based on user intent and input context.",
+      tech: ["React", "Node.js", "Docker", "PostgreSQL"],
+      features: [
+        "AI-generated form structure from natural language prompts",
+        "Drag-and-drop interface for manual customization",
+        "Conditional logic and branching support",
+        "Real-time validation and auto-suggestions",
+        "Role-based access and submission management",
+        "Export to PDF, CSV, or integrate via webhooks",
+      ],
+      github: "https://github.com/hemant838/formscratch.git",
+      color: "from-green-500 to-blue-500",
+    },
+    {
+      id: 5,
+      title: "Global Price Comparison Tool",
+      description: "AI-powered price comparison platform that scrapes and analyzes product prices across major e-commerce sites worldwide.",
+      tech: ["Next.js", "Node.js", "Supabase", "Cheerio", "Docker"],
+      features: [
+        "Scrapes product data from Amazon, Flipkart, eBay, Shopee, Lazada, and Google Shopping",
+        "AI-powered product matching across platforms",
+        "Supports over 70 currencies and 195+ countries",
+        "Real-time updates with background polling or webhooks",
+        "Telegram/email alerts for price drops or restocks",
+        "Responsive UI with global search and localization support"
+      ],
+      github: "https://github.com/hemant838/price-comparison-tool",
+      liveUrl: "https://price-comparison-demo.vercel.app", // Add your live URL here
+      color: "from-yellow-500 to-red-500"
+    },
+    {
+  id: 6,
+  title: "Job Alert Bot",
+  description: "A smart job alert system that scrapes listings based on user preferences and sends timely notifications via Telegram and Email.",
+  tech: ["Node.js", "Puppeteer", "Cron"],
   features: [
-    "AI-generated resume suggestions",
-    "Multi-tenant architecture for scalable user management",
-    "Role-based access control for admins and users",
-    "Smart formatting and keyword optimization for ATS compliance",
-    "Real-time preview and PDF export",
-    "Increased user engagement with dynamic recommendations",
+    "Scrapes job listings from popular job boards and company websites",
+    "Keyword and location-based filtering system",
+    "Sends real-time alerts via Telegram and email",
+    "Interactive Telegram bot to manage user preferences",
+    "User data and alert history stored in MongoDB",
+    "Runs scheduled scrapes with cron jobs and Dockerized deployment"
   ],
-  github: "https://github.com/hemant838/resumeXpert.git",
-  color: "from-orange-500 to-red-500",
+  github: "https://github.com/hemant838/daily-job-bot.git", // replace with actual link if different
+  color: "from-pink-500 to-rose-500"
 },
 {
-  id: 4,
-  title: "Form Scratch",
-  description: "AI-powered form builder that generates smart, dynamic forms based on user intent and input context.",
-  tech: ["React", "Node.js", "Docker", "PostgreSQL"],
+  id: 7,
+  title: "GitHub Repo Tracker",
+  description: "A full-stack tracker that monitors any public GitHub repository and sends real-time alerts for issues, pull requests, stars, and releases.",
+  tech: ["Next.js", "Supabase", "GitHub API", "Resend", "Tailwind CSS", "Node.js", "Prisma"],
   features: [
-    "AI-generated form structure from natural language prompts",
-    "Drag-and-drop interface for manual customization",
-    "Conditional logic and branching support",
-    "Real-time validation and auto-suggestions",
-    "Role-based access and submission management",
-    "Export to PDF, CSV, or integrate via webhooks",
+    "Track any public GitHub repository",
+    "Real-time notifications for new issues, PRs, stars, and releases",
+    "Custom notification preferences per user",
+    "Email alerts powered by Resend",
+    "Background polling via cron jobs for reliability"
   ],
-  github: "https://github.com/hemant838/formscratch.git",
-  color: "from-green-500 to-blue-500",
+  github: "https://github.com/hemant838/github-repo-tracker.git",
+  liveUrl: "https://github-repo-tracker-chi.vercel.app/", // update if your repo URL is different
+  color: "from-blue-600 to-violet-600"
 }
+
+
+
 
 
   ]
@@ -119,12 +171,28 @@ export default function ProjectsSection() {
                   <div className="flex space-x-3">
                     <motion.a
                       href={project.github}
+                      target="_blank"
+                      rel="noopener noreferrer"
                       className="p-2 rounded-full bg-white/10 text-white hover:bg-white/20 transition-colors"
                       whileHover={{ scale: 1.1 }}
                       whileTap={{ scale: 0.9 }}
+                      onClick={(e) => e.stopPropagation()}
                     >
                       <Github size={16} />
                     </motion.a>
+                    {project.liveUrl && (
+                      <motion.a
+                        href={project.liveUrl}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="p-2 rounded-full bg-white/10 text-white hover:bg-white/20 transition-colors"
+                        whileHover={{ scale: 1.1 }}
+                        whileTap={{ scale: 0.9 }}
+                        onClick={(e) => e.stopPropagation()}
+                      >
+                        <ExternalLink size={16} />
+                      </motion.a>
+                    )}
                   </div>
                 </div>
 
@@ -175,13 +243,26 @@ export default function ProjectsSection() {
                       <div className="flex space-x-4">
                         <motion.a
                           href={project.github}
+                          target="_blank"
+                          rel="noopener noreferrer"
                           className="flex items-center space-x-2 px-6 py-3 bg-white/10 rounded-full text-white hover:bg-white/20 transition-colors"
                           whileHover={{ scale: 1.05 }}
                         >
                           <Github size={20} />
                           <span>View Code</span>
                         </motion.a>
-                        
+                        {project.liveUrl && (
+                          <motion.a
+                            href={project.liveUrl}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="flex items-center space-x-2 px-6 py-3 bg-gradient-to-r from-blue-500 to-purple-500 rounded-full text-white hover:from-blue-600 hover:to-purple-600 transition-colors"
+                            whileHover={{ scale: 1.05 }}
+                          >
+                            <ExternalLink size={20} />
+                            <span>Live Demo</span>
+                          </motion.a>
+                        )}
                       </div>
                     </>
                   )

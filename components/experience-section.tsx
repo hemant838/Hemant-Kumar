@@ -8,8 +8,8 @@ export default function ExperienceSection() {
     {
   company: "Attack Capital",
   role: "Full Stack Developer",
-  duration: "July 2025 – Present",
-  location: "New York City, Remote",
+  duration: "Jul. 2025 – Present",
+  location: "New York City, US (Remote)",
   description: "Building scalable SaaS solutions for a cold email platform, contributing across the stack to enhance performance and usability.",
   achievements: [
     "Improved user management and campaign workflows, boosting efficiency by 30%.",

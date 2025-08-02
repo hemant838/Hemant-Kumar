@@ -6,9 +6,26 @@ import { Calendar, MapPin, TrendingUp } from "lucide-react"
 export default function ExperienceSection() {
   const experiences = [
     {
+  company: "Attack Capital",
+  role: "Full Stack Developer",
+  duration: "July 2025 – Present",
+  location: "New York City, Remote",
+  description: "Building scalable SaaS solutions for a cold email platform, contributing across the stack to enhance performance and usability.",
+  achievements: [
+    "Improved user management and campaign workflows, boosting efficiency by 30%.",
+    "Optimized backend (Node.js, PostgreSQL, Redis), cutting API response time by 25%.",
+    "Built robust RESTful APIs and integrated BullMQ for efficient job queuing.",
+    "Led frontend development with React and Tailwind, increasing engagement by 35%.",
+    "Integrated Stripe for billing and automated invoicing.",
+    "Implemented multi-tenant architecture and reduced script execution time by 45%."
+  ],
+  tech: ["React", "Node.js", "PostgreSQL", "Redis", "Docker", "Tailwind CSS", "Stripe", "BullMQ"],
+  color: "from-green-500 to-indigo-500",
+},
+    {
       company: "India Accelerator",
       role: "Full Stack Developer Intern",
-      duration: "Nov. 2024 – Present",
+      duration: "Nov. 2024 – Jul. 2025",
       location: "Gurugram, India",
       description: "Building scalable SaaS solutions with modern tech stack",
       achievements: [

@@ -19,7 +19,7 @@ export default function ExperienceSection() {
     "Integrated Stripe for billing and automated invoicing.",
     "Implemented multi-tenant architecture and reduced script execution time by 45%."
   ],
-  tech: ["React", "Node.js", "PostgreSQL", "Redis", "Docker", "Tailwind CSS", "Stripe", "BullMQ"],
+  tech: ["Next.JS","React", "Node.js", "PostgreSQL", "Redis", "Docker", "Tailwind CSS", "Stripe", "BullMQ"],
   color: "from-green-500 to-indigo-500",
 },
     {

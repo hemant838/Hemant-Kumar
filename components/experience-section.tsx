@@ -24,7 +24,7 @@ export default function ExperienceSection() {
 },
     {
       company: "India Accelerator",
-      role: "Full Stack Developer Intern",
+      role: "Full Stack Developer",
       duration: "Nov. 2024 – Jul. 2025",
       location: "Gurugram, India",
       description: "Building scalable SaaS solutions with modern tech stack",

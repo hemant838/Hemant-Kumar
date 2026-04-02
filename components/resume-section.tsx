@@ -134,7 +134,7 @@ export default function ResumeSection() {
               <div className="space-y-3">
                 <motion.div whileHover={{ scale: 1.02 }} whileTap={{ scale: 0.98 }}>
                   <Button asChild className="w-full bg-gradient-to-r from-purple-500 to-blue-500 hover:from-purple-600 hover:to-blue-600 text-white interactive">
-                    <a href="/hemant_full_stack.pdf" download="Hemant_Kumar_Resume.pdf">
+                    <a href="/Hemant_Resume.pdf" download="Hemant_Resume.pdf">
                       <Download size={20} className="mr-2" />
                       Download PDF
                     </a>
@@ -147,7 +147,7 @@ export default function ResumeSection() {
                     asChild
                     className="w-full border-white/20 text-white hover:bg-white/10 interactive bg-transparent"
                   >
-                    <a href="/hemant_full_stack.pdf" target="_blank" rel="noopener noreferrer">
+                    <a href="/Hemant_Resume.pdf" target="_blank" rel="noopener noreferrer">
                       <Eye size={20} className="mr-2" />
                       Preview Online
                     </a>

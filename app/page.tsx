@@ -89,6 +89,18 @@ const projects = [
   },
 ]
 
+const projectColSpanClasses: Record<number, string> = {
+  1: "md:col-span-1",
+  2: "md:col-span-2",
+  3: "md:col-span-3",
+  4: "md:col-span-4",
+}
+
+const projectRowSpanClasses: Record<number, string> = {
+  1: "md:row-span-1",
+  2: "md:row-span-2",
+}
+
 const experiences = [
   {
     role: "Full Stack Developer",
@@ -600,7 +612,7 @@ function Projects() {
             <span className="mono mt-1 text-[10px] text-[#1A1A1A] opacity-70">Search, scraping, alerts</span>
           </div>
 
-          <div className="flex flex-1 flex-col justify-between p-6 sm:border-r-[3px] sm:border-[#1A1A1A]">
+          <div className="flex min-w-0 flex-1 flex-col justify-between p-6 sm:border-r-[3px] sm:border-[#1A1A1A]">
             <div>
               <p className="mono mb-2 text-[9px] uppercase tracking-[0.15em] opacity-50">Featured Project</p>
               <h3 className="mb-3 text-[20px] font-bold leading-tight">{featuredProject.title}</h3>
@@ -628,11 +640,7 @@ function Projects() {
           {projects.map((project, index) => (
             <motion.article
               key={project.title}
-              className="neo-card flex flex-col overflow-hidden p-4"
-              style={{
-                gridColumn: `span ${project.colSpan}`,
-                gridRow: `span ${project.rowSpan}`,
-              }}
+              className={`neo-card flex min-w-0 flex-col overflow-hidden p-4 ${projectColSpanClasses[project.colSpan] ?? "md:col-span-1"} ${projectRowSpanClasses[project.rowSpan] ?? "md:row-span-1"}`}
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
